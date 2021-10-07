@@ -7,6 +7,12 @@ const baseUrl = "https://platzi-avo.vercel.app";
 
 const appNode = document.querySelector('#app');
 
+appNode.addEventListener("click", (event)=> {
+    if (event.target.nodeName ==="H2"){
+        window.alert("hola");
+    }
+});
+
 const formatPrice = (price) =>{
 
     const newPrice= new window.Intl.NumberFormat('en-En',{
@@ -42,6 +48,12 @@ window
             const title = document.createElement("h2");
             title.textContent = item.name;
             title.className ="text-xl"; //utilizaremos framework tailwinds
+
+            //Manera de escuchar poco eficiente
+            // title.addEventListener("click", ()=> {
+            //     window.alert("hola");
+            // });
+
             //crear precio
             const price = document.createElement("div");
             //utilizando API internacional
