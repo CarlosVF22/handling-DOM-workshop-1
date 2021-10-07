@@ -7,6 +7,8 @@ const baseUrl = "https://platzi-avo.vercel.app";
 
 const appNode = document.querySelector('#app');
 
+//utilizarlo siempre que sea posible
+//delegacion de eventos
 appNode.addEventListener("click", (event)=> {
     if (event.target.nodeName ==="H2"){
         window.alert("hola");
